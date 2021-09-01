@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ScreenGenreFilm2 from "./ScreenGenreFilm2";
 
 const Stack = createStackNavigator();
+
 class  Genere extends React.Component {
   render() {
     return (
@@ -18,4 +19,5 @@ class  Genere extends React.Component {
     );
   }
 }
+
 export default Genere;

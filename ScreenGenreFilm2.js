@@ -5,14 +5,16 @@ import {
 import axios from "axios";
 import { Card } from "react-native-paper";
 
-class  ScreenGenreFilm2 extends React.Component {
+class ScreenGenreFilm2 extends React.Component {
   state = {
     TvShow: []
   }
+
   componentDidMount() {
     this.props.navigation.setOptions({title: `${this.props.route.params.name}`})
     this.start();
   }
+
   start = async () => {
     try {
       const data = await axios.get(`https://api.themoviedb.org/3/discover/${this.props.route.params.props !== `Film` ? `movie` : `tv`}?api_key=1ea54fff90d26ae7dc1f5e21fe637664&language=ru&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${this.props.route.params.detail}`);
@@ -22,6 +24,7 @@ class  ScreenGenreFilm2 extends React.Component {
     }catch {
     }
   }
+
   render() {
     return (
       <>
@@ -48,4 +51,5 @@ class  ScreenGenreFilm2 extends React.Component {
     );
   }
 }
+
 export default ScreenGenreFilm2;

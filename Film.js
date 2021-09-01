@@ -17,4 +17,5 @@ class FilmScreen extends React.Component {
     );
   }
 }
+
 export default FilmScreen;

@@ -4,6 +4,7 @@ import  ScreenGenreSerial from "./ScreenGenreSerial"
 import ScreenGenreFilm from "./ScreenGenreFilm";
 
 const Tab = createMaterialTopTabNavigator();
+
 class  GenreSerialandGenreFilm extends React.Component {
   render() {
     return (

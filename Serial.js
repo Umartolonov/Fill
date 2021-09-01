@@ -17,4 +17,5 @@ class Serial extends React.Component {
     );
   }
 }
+
 export default Serial;

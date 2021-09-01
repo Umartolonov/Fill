@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text } from "react-native";
+import { FlatList } from "react-native";
 import { Card } from "react-native-paper";
 import axios from "axios";
 
@@ -7,9 +7,11 @@ class  ScreenSerial extends React.Component {
   state = {
     Serial: []
   }
+
   componentDidMount() {
     this.start();
   }
+
   start = async () => {
     try {
       const data = await axios.get(`https://api.themoviedb.org/3/tv/airing_today?api_key=1ea54fff90d26ae7dc1f5e21fe637664&language=en-RU&page=1`);
@@ -19,6 +21,7 @@ class  ScreenSerial extends React.Component {
     }catch {
     }
   }
+
   render() {
     return (
       <>
@@ -35,7 +38,7 @@ class  ScreenSerial extends React.Component {
                 <Card.Cover source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }} />
               </Card.Content>
               <Card.Actions>
-                <Card.Title title={item.name}  subtitleNumberOfLines={100} />
+                <Card.Title title={item.name} subtitleNumberOfLines={100} />
               </Card.Actions>
             </Card>
           );

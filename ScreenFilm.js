@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text } from "react-native";
+import { FlatList } from "react-native";
 import { Card } from "react-native-paper";
 import axios from "axios";
 
@@ -7,9 +7,11 @@ class  ScreenFilm extends React.Component {
   state = {
     Film: []
   }
+
   componentDidMount() {
     this.start();
   }
+
   start = async () => {
     try {
       const data = await axios.get(`https://api.themoviedb.org/3/movie/popular/?api_key=1ea54fff90d26ae7dc1f5e21fe637664&language=ru`);
@@ -19,6 +21,7 @@ class  ScreenFilm extends React.Component {
     }catch {
     }
   }
+
   render() {
     return (
       <>

@@ -4,6 +4,7 @@ import MoreDetails from "./MoreDetails";
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
+
 class  Home extends React.Component {
   render() {
     return (

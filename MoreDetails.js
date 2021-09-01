@@ -5,6 +5,7 @@ class  MoreDetails extends React.Component {
   state = {
     Details: this.props.route.params.detail
   }
+
   componentDidMount() {
     this.props.navigation.setOptions({title: `${this.props.route.params.name}`, headerShown: true})
   }

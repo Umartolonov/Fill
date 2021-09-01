@@ -4,6 +4,7 @@ import ScreenHomeTV from "./ScreenHomeTV";
 import ScreenHomeCinema from "./ScreenHomeCinema";
 
 const Tab = createMaterialTopTabNavigator();
+
 class  HomeTVandHomeCinemal extends React.Component {
   render() {
     return (

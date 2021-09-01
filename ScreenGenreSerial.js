@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text } from "react-native";
+import { FlatList } from "react-native";
 import { Card } from "react-native-paper";
 import axios from "axios";
 
@@ -7,9 +7,11 @@ class  ScreenGenreSerial extends React.Component {
   state = {
     Cinema: []
   }
+
   componentDidMount() {
     this.start();
   }
+
   start = async () => {
     try {
       const data = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=1ea54fff90d26ae7dc1f5e21fe637664&language=ru`);
@@ -19,6 +21,7 @@ class  ScreenGenreSerial extends React.Component {
     }catch {
     }
   }
+
   render() {
     return (
       <>
@@ -33,7 +36,7 @@ class  ScreenGenreSerial extends React.Component {
               onPress={() => this.props.navigation.navigate('ScreenGenreFilm2', {detail: item.id, name: item.name, props: `Serial`})}
             >
               <Card.Actions>
-                <Card.Title title={item.name}  subtitleNumberOfLines={100} />
+                <Card.Title title={item.name} subtitleNumberOfLines={100} />
               </Card.Actions>
             </Card>
           );
